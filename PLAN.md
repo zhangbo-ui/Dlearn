@@ -72,9 +72,9 @@ Dlearn/
 
 ### 阶段 1：数据（1~2 天）
 
-- [ ] 下载 Fashion-MNIST（`torchvision.datasets` 或直接下载 IDX 原始文件，用 NumPy 解析更佳）
-- [ ] `src/data.py`：返回形状为 `(N, 784)` 的 float 数组，归一化到 `[0,1]`；从训练集切出 10% 作验证集
-- [ ] Notebook 可视化：每类抽几张图看看；打印类别分布确认均衡
+- [x] 下载 Fashion-MNIST（`torchvision.datasets` 或直接下载 IDX 原始文件，用 NumPy 解析更佳）
+- [x] `src/data.py`：返回形状为 `(N, 784)` 的 float 数组，归一化到 `[0,1]`；从训练集切出 10% 作验证集
+- [x] Notebook 可视化：每类抽几张图看看；打印类别分布确认均衡
 
 **验收**：能正确取出一批数据，形状、取值范围、标签都对；图能画出来。
 
