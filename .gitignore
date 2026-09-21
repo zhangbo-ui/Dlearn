@@ -1,0 +1,19 @@
+# 虚拟环境
+.venv/
+
+# 数据集
+data/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.egg-info/
+
+# 实验产物
+*.pth
+*.npy
+*.npz
+
+# IDE
+.idea/
+.vscode/
