@@ -80,10 +80,10 @@ Dlearn/
 
 ### 阶段 2：前向传播（2~3 天）
 
-- [ ] `layers.py`：实现 `Linear`（存 `W`、`b`，`forward(x)` 返回 `xW+b`）和 `ReLU`
-- [ ] `init.py`：He 初始化（`W ~ N(0, sqrt(2/fan_in))`）；先试试全零初始化，观察会发生什么（这是重要一课）
-- [ ] `model.py`：`Sequential` 按顺序调用各层 `forward`
-- [ ] 单元测试：形状正确性（`(N,784)→(N,256)→(N,128)→(N,10)`）、ReLU 只在负数处置零
+- [x] `layers.py`：实现 `Linear`（存 `W`、`b`，`forward(x)` 返回 `xW+b`）和 `ReLU`
+- [x] `init.py`：He 初始化（`W ~ N(0, sqrt(2/fan_in))`）；先试试全零初始化，观察会发生什么（这是重要一课）
+- [x] `model.py`：`Sequential` 按顺序调用各层 `forward`
+- [x] 单元测试：形状正确性（`(N,784)→(N,256)→(N,128)→(N,10)`）、ReLU 只在负数处置零
 
 **验收**：随机权重跑一次前向得到 `(N, 10)` 的 logits，`pytest tests/` 通过。
 
