@@ -89,12 +89,12 @@ Dlearn/
 
 ### 阶段 3：损失与反向传播（3~4 天，本项目核心）
 
-- [ ] `losses.py`：Softmax + 交叉熵**合并实现**（先算 `logits - max(logits)` 防溢出），提供 `forward(logits, y)` 和 `backward()` 返回 `dlogits`
-- [ ] 给每层补 `backward(grad)`：
+- [x] `losses.py`：Softmax + 交叉熵**合并实现**（先算 `logits - max(logits)` 防溢出），提供 `forward(logits, y)` 和 `backward()` 返回 `dlogits`
+- [x] 给每层补 `backward(grad)`：
   - ReLU：按 mask 传递梯度
   - Linear：`dW = xᵀ·grad`，`db = sum(grad)`，`dx = grad·Wᵀ`（自己推一遍再写，别抄）
-- [ ] `Sequential.backward` 逆序调用各层，把梯度存到每层 `dW`、`db`
-- [ ] `scripts/grad_check.py`：数值梯度校验——对每个参数用 `(f(θ+ε)-f(θ-ε))/(2ε)` 估计梯度，与解析梯度比较，相对误差应 `< 1e-6`
+- [x] `Sequential.backward` 逆序调用各层，把梯度存到每层 `dW`、`db`
+- [x] `scripts/grad_check.py`：数值梯度校验——对每个参数用 `(f(θ+ε)-f(θ-ε))/(2ε)` 估计梯度，与解析梯度比较，相对误差应 `< 1e-6`
 
 **验收**：梯度校验全部通过。**这一步没通过之前不要进入下一阶段。**
 
