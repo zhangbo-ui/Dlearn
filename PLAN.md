@@ -100,13 +100,13 @@ Dlearn/
 
 ### 阶段 4：优化器与训练循环（2~3 天）
 
-- [ ] `optim.py`：SGD、SGD+Momentum（`v = μv - lr·g; θ += v`）
-- [ ] `scripts/train_numpy.py` 完整训练循环：
+- [x] `optim.py`：SGD、SGD+Momentum（`v = μv - lr·g; θ += v`）
+- [x] `scripts/train_numpy.py` 完整训练循环：
   1. 每 epoch 打乱数据，按 batch 切片
   2. 前向 → 算损失 → 反向 → `optimizer.step()`
   3. 每 epoch 结束在验证集上评估，记录 loss/acc 曲线
   4. 保存最优参数与训练历史
-- [ ] 超参起点：`lr=0.1`（SGD）、`batch=64`、`epochs=30`、He 初始化
+- [x] 超参起点：`lr=0.1`（SGD）、`batch=64`、`epochs=30`、He 初始化
 
 **验收**：训练 loss 稳定下降，验证准确率 ≥ 85%。若不收敛，按第八节清单排查。
 
